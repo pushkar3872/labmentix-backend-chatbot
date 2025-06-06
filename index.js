@@ -1,7 +1,7 @@
 const express = require('express');
 
 
-const port = 5000;
+
 
 const app = express();
 app.use(express.json());
@@ -14,9 +14,11 @@ const cors = require('cors');
 app.use(cors());
 const apiKey = process.env.GEMINI_API_KEY;  //extracting the gemini api key over here
 
+const PORT = process.env.PORT || 5000;
 
-const {myrouter} = require('./route/myrouter');  // keep the brackets as the same for the exporting and the imporing the componenet
-//over there
+
+// const {myrouter} = require('./route/myrouter');  // keep the brackets as the same for the exporting and the imporing the componenet
+// //over there
 
 
 // app.use('/api',myrouter);
@@ -30,8 +32,6 @@ const {myrouter} = require('./route/myrouter');  // keep the brackets as the sam
 // {
 //     res.end("heello from the about page :");
 // })
-
-
 
 app.post('/callapi', async (req, res) => {
 
@@ -96,9 +96,7 @@ app.post('/callapi', async (req, res) => {
 });
 
 
-
-
-app.listen(port, (req,res)=>{
+app.listen(PORT, (req,res)=>{
 
     console.log("heello from the homepage:");
 })
