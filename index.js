@@ -18,8 +18,12 @@ dotenv.config();
 // Example for Express.js backend
 //keep in the mind that one you have to check cores is going to be blocked or not
 const cors = require('cors');
+
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: [
+    'http://localhost:3000',
+    'https://labmentix-frontend-chatbot-1.vercel.app'
+  ],
   credentials: true
 }));
 
