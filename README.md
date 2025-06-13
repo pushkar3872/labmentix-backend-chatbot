@@ -266,6 +266,12 @@ Feel free to explore the code and expand the functionality as needed.
 > 💡 Tip: Use `.env.production` for Vercel and production `.env` files for other services to separate dev and prod configurations.
 
 
+
+The application is live at:  
+🔗 [https://labmentix-frontend-chatbot-1.vercel.app](https://labmentix-frontend-chatbot-1.vercel.app)
+
+
+
 ## 📡 API Endpoints
 
 ### 🔐 Authentication Endpoints
